@@ -8,6 +8,16 @@
     color: var(--foreground-primary);
 }
 
+body, html {
+    width: 100%;
+    max-width: 100%;
+}
+
+main {
+    width: 100%;
+    max-width: 2200px;  /* or 2500px */
+}
+
 a {
     text-decoration: underline solid var(--link-unvisited);
     text-underline-offset: 0.3em;
@@ -35,11 +45,6 @@ a:visited:hover {
     color: var(--foreground-primary);
 }
 
-body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-}
 
 blockquote {
     font-style: italic;
@@ -235,4 +240,24 @@ tr {
 ul li p {
     margin-top: 0.5em;
     margin-bottom: 0;
+}
+/* Column wrapper */
+.two-col {
+    display: flex;
+    gap: 50px;           /* spacing between columns */
+    margin-top: 40px;
+}
+
+/* Very wide columns */
+.col-left,
+.col-right {
+    flex: 2;             /* <-- this makes both columns very wide */
+    min-width: 0;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .two-col {
+        flex-direction: column;
+    }
 }
