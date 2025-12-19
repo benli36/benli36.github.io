@@ -6,4 +6,47 @@
   --link-unvisited: lightskyblue;
   --link-visited: violet;
   --new-code: seagreen;
+
+  /* semantic aliases */
+  --bg-main: var(--background-primary);
+  --bg-alt: var(--background-secondary);
+  --text-main: var(--foreground-primary);
+  --text-muted: #9ca3af;
+  --border-color: #30363d;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+a {
+  color: var(--link-unvisited);
+  text-decoration-color: rgba(135, 206, 250, 0.5);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3 {
+  color: var(--foreground-secondary);
+}
+
+.card,
+.sidebar,
+aside {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+code, pre {
+  background-color: #161b22;
+  color: var(--new-code);
+  border-radius: 6px;
 }
