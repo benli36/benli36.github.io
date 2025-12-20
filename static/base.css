@@ -218,12 +218,12 @@ td, th {
 
 /* Card-like sections in right column */
 .col-right section {
-  background: var(--background-secondary);
-  border: 1px solid var(--border-subtle);
-  border-radius: 14px;
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+  background: transparent;              /* ← key change */
+  border: none;                          /* optional, cleaner */
+  border-radius: 0;                      /* optional */
+  padding: 0 0 12px 0;                   /* keep spacing */
+  margin-bottom: 24px;
+  transition: transform 150ms ease;
 }
 
 /* subtle lift */
