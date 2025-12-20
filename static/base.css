@@ -218,19 +218,21 @@ td, th {
 
 /* Card-like sections in right column */
 .col-right section {
-  background: transparent;              /* ← key change */
-  border: none;                          /* optional, cleaner */
-  border-radius: 0;                      /* optional */
-  padding: 0 0 12px 0;                   /* keep spacing */
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 12px 0;
   margin-bottom: 24px;
-  transition: transform 150ms ease;
+  transition: background-color 150ms ease,
+              color 150ms ease,
+              transform 150ms ease;
 }
 
 /* subtle lift */
 .col-right section:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-subtle);
-  border-color: rgba(17, 24, 39, 0.18);
+  background-color: #000000;   /* black on hover */
+  color: #ffffff;              /* ensure text stays readable */
+  transform: translateY(-2px);
 }
 
 /* Lists */
